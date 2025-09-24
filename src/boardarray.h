@@ -17,7 +17,6 @@ class BoardArray : public Board {
             // TODO: IMPLEMENT THIS FUNCTION
             // ALGORITHM IS PROVIDED IN INSTRUCTIONS.TXT
 
-
             int i, j;
             for(i = 0; i < SIZE; i++){
                 if(entry){
@@ -28,10 +27,11 @@ class BoardArray : public Board {
                   index++;
                   return;
                 }
+                else{
+                  cout << entry->name << "'s score is too low to be added!" << endl;
+                  return;
+                }
             }
-
-
-
         }
 
         void print() {
