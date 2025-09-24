@@ -17,37 +17,12 @@ class BoardArray : public Board {
             // TODO: IMPLEMENT THIS FUNCTION
             // ALGORITHM IS PROVIDED IN INSTRUCTIONS.TXT
 
-            // int i, j;
-            // for(i = 0; i < index; i++){
-            //   Entry existing = array[i]; // *(array + i);
-            //     if(entry->compare(&existing)){
-            //         for(j = index; j > i; j--){
-            //           if(index == SIZE){
-            //             continue;
-            //           }
-            //             array[j] = array[j - 1];
-            //         }
-            //       array[i] = *entry;
-            //       if(index < SIZE){
-            //         index++;
-            //       }
-            //       return;
-            //     }
-            // }
-            //
-            // if(index < SIZE){
-            //   arr[index] = *entry;
-            //   index++;
-            // }
-            // else {
-            //   cout << entry->name << "'s score is too low to be added!" << endl;
-            // }
-
             int i, j;
             for(i = 0; i < index; i++){
-                if(entry->compare(&array[i])){
+              Entry existing = array[i]; // *(array + i);
+                if(entry->compare(&existing)){
                     for(j = index; j > i; j--){
-                      if(index == SIZE){
+                      if(j == SIZE){
                         continue;
                       }
                         array[j] = array[j - 1];
@@ -67,6 +42,7 @@ class BoardArray : public Board {
             else {
               cout << entry->name << "'s score is too low to be added!" << endl;
             }
+
 
             // int i, j;
             // for(i = 0; i < SIZE; i++){
