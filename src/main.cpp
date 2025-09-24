@@ -13,7 +13,7 @@ int main() {
         switch (ans) {
             case 'a':
         		cout << "Enter name: ";
-                cin.ignore(); 
+                cin.ignore();
         		getline(cin, player1->name);
         		cout << "Enter college: ";
         		cin >> player1->college;
