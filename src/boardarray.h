@@ -17,10 +17,10 @@ class BoardArray : public Board {
             // TODO: IMPLEMENT THIS FUNCTION
             // ALGORITHM IS PROVIDED IN INSTRUCTIONS.TXT
 
-            int i;
+            int i, j;
             for(i = 0; i < SIZE; i++){
                 if(entry){
-                    for(int j = SIZE - 1; j > i; j--){
+                    for(j = SIZE - 1; j > i; j--){
                         array[j] = array[j - 1];
                     }
                     array[i] = *entry;
