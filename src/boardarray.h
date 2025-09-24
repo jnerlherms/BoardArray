@@ -17,19 +17,20 @@ class BoardArray : public Board {
             // TODO: IMPLEMENT THIS FUNCTION
             // ALGORITHM IS PROVIDED IN INSTRUCTIONS.TXT
 
+
             int i, j;
             for(i = 0; i < SIZE; i++){
                 if(entry){
                     for(j = SIZE - 1; j > i; j--){
                         array[j] = array[j - 1];
                     }
-                    array[i] = *entry;
-                    index++;
-                    return;
+                  array[i] = *entry;
+                  index++;
+                  return;
                 }
             }
 
-            cout << entry->name << "'s score is too low to be added!" << endl;
+
 
         }
 
