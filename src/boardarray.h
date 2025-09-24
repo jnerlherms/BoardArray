@@ -19,7 +19,7 @@ class BoardArray : public Board {
 
             int i, j;
             for(i = 0; i < SIZE; i++){
-                if(entry){
+                if(entry->compare(&array[i])){
                     for(j = SIZE - 1; j > i; j--){
                         array[j] = array[j - 1];
                     }
@@ -27,11 +27,14 @@ class BoardArray : public Board {
                   index++;
                   return;
                 }
-                else{
-                  cout << entry->name << "'s score is too low to be added!" << endl;
-                  return;
-                }
+                // else{
+                //   cout << entry->name << "'s score is too low to be added!" << endl;
+                //   return;
+                // }
             }
+
+            cout << entry->name << "'s score is too low to be added!" << endl;
+
         }
 
         void print() {
