@@ -36,27 +36,13 @@ class BoardArray : public Board {
             }
 
             if(index < SIZE){
-              arr[index] = *entry;
+              array[index] = *entry;
               index++;
             }
             else {
               cout << entry->name << "'s score is too low to be added!" << endl;
             }
 
-
-            // int i, j;
-            // for(i = 0; i < SIZE; i++){
-            //     if(entry->compare(&array[i])){
-            //         for(j = SIZE - 1; j > i; j--){
-            //             array[j] = array[j - 1];
-            //         }
-            //       array[i] = *entry;
-            //       index++;
-            //       return;
-            //     }
-            // }
-            //
-            // cout << entry->name << "'s score is too low to be added!" << endl;
             return;
         }
 
